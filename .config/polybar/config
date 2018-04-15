@@ -9,11 +9,11 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #00000000
-background-alt = #33000000
+background = #ee464a51
+background-alt = #77464a51
 ;foreground = ${xrdb:color7:#222}
-foreground = #ff000000
-foreground-alt = #66000000
+foreground = #fffffbf4
+foreground-alt = #66fffbf4
 primary = #666
 secondary = #000000
 alert = #bd2c40
@@ -21,9 +21,9 @@ alert = #bd2c40
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 30
+height = 26
 ;offset-x = 1%
-offset-y = 4
+offset-y = 0 
 radius = 0.0
 fixed-center = true
 
@@ -42,13 +42,13 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = fixed:pixelsize=16;3
+font-0 = fixed:pixelsize=11;3
 ;font-1 = unifont:fontformat=truetype:size=12:antialias=false;0
 ;font-2 = siji:pixelsize=14;1
 
 modules-left = bspwm
 modules-center = xwindow
-modules-right = date
+modules-right = battery date
 
 tray-position = right
 tray-padding = 2
@@ -368,7 +368,7 @@ screenchange-reload = true
 ;compositing-border = over
 
 [global/wm]
-margin-top = 5
-margin-bottom = 5
+margin-top = 0
+margin-bottom = 0
 
 ; vim:ft=dosini

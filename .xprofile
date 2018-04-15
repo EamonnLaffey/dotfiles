@@ -1,6 +1,0 @@
-for output in $(xrandr --prop | grep -E -o -i "^[A-Z\-]+-[0-9]+"); do xrandr --output "$output" --set "scaling mode" "Full aspect"; done
-xrandr --dpi 144
-
-export XDG_CONFIG_HOME="$HOME/.config"
-export QT_AUTO_SCREEN_SCALE_FACTOR=1
-export GDK_SCALE=1

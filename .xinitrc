@@ -10,6 +10,7 @@
 #done &
 #exec dwm
 
+xbindkeys &
 compton &
 redshift &
 exec bspwm
