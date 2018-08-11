@@ -8,20 +8,16 @@
 ;=====================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
-background = #ee464a51
-background-alt = #77464a51
-;foreground = ${xrdb:color7:#222}
-foreground = #fffffbf4
-foreground-alt = #66fffbf4
-primary = #666
-secondary = #000000
-alert = #bd2c40
+background = ${xrdb:color0}
+background-alt = #665c54
+foreground = ${xrdb:color15}
+foreground-alt = #504945
+alert = ${xrdb:color1}
 
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 26
+height = 22
 ;offset-x = 1%
 offset-y = 0 
 radius = 0.0
@@ -37,12 +33,14 @@ border-size = 0
 border-color = #00000000
 
 padding-left = 1
-padding-right = 2
+padding-right = 1
 
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = fixed:pixelsize=11;3
+font-0 = monospace:size=10;3
+font-1 = monospace:size=10;3
+font-2 = monospace:size=10;3
 ;font-1 = unifont:fontformat=truetype:size=12:antialias=false;0
 ;font-2 = siji:pixelsize=14;1
 
@@ -71,7 +69,7 @@ cursor-scroll = ns-resize
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:120:...%
+label = %title:0:80:...%
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -105,18 +103,18 @@ type = internal/bspwm
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
 ;label-focused-underline= ${colors.primary}
-label-focused-padding = 2
+label-focused-padding = 1
 
 label-occupied = %index%
-label-occupied-padding = 2
+label-occupied-padding = 1
 
 label-urgent = %index%!
 label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
+label-urgent-padding = 1
 
 label-empty = %index%
 label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
+label-empty-padding = 1
 
 [module/i3]
 type = internal/i3
