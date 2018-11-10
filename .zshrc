@@ -7,7 +7,7 @@ ZSH=/usr/share/oh-my-zsh/
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="frisk"
+ZSH_THEME=""
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -101,6 +101,9 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
+autoload -U promptinit; promptinit
+prompt pure
+
 bindkey -v
 
 bindkey '^P' up-history
@@ -109,3 +112,5 @@ bindkey '^?' backward-delete-char
 bindkey '^h' backward-delete-char
 bindkey '^w' backward-kill-word
 bindkey '^r' history-incremental-search-backward
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
