@@ -1,0 +1,6 @@
+name: common
+files:
+    - .zshrc
+    - .notshared.zsh
+    - .config/nvim/init.vim
+    - .config/kitty/kitty.conf
