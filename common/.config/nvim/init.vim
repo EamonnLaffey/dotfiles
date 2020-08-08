@@ -6,11 +6,12 @@ Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'tikhomirov/vim-glsl'
 
 call plug#end()
 
-nnoremap <Leader><space> :noh<cr>
+map <space> <leader>
+nnoremap <leader>c :noh<cr>
 
 set background=dark
 set hidden
@@ -28,17 +29,27 @@ set termguicolors
 
 let g:rustfmt_autosave = 1
 
+"" <Leader>f{char} to move to {char}
+"map  <Leader>f <Plug>(easymotion-bd-f)
+"nmap <Leader>f <Plug>(easymotion-overwin-f)
+"
+"" s{char}{char} to move to {char}{char}
+"nmap s <Plug>(easymotion-overwin-f2)
+"
+"" Move to line
+"map <Leader>L <Plug>(easymotion-bd-jk)
+"nmap <Leader>L <Plug>(easymotion-overwin-line)
+"
+"" Move to word
+"map  <Leader>w <Plug>(easymotion-bd-w)
+"nmap <Leader>w <Plug>(easymotion-overwin-w)
+
 nnoremap <silent> <c-l> <c-w>l
 nnoremap <silent> <c-h> <c-w>h
 nnoremap <silent> <c-k> <c-w>k
 nnoremap <silent> <c-j> <c-w>j
 
-map <Space> <Leader>
-
-map <silent> <C-b> <c-w>>
-map <silent> <C-n> <c-w><
-
-map <c-m> :NERDTreeToggle<cr>
+map <leader>m :NERDTreeToggle<cr>
 
 " FZF
 if executable('rg')
@@ -46,13 +57,12 @@ if executable('rg')
   set grepprg=rg\ --vimgrep
 endif
 
-nnoremap <leader>g :! rusty-tags vi -O tags
-
 let g:fzf_command_prefix = 'Fzf'
 if executable('fzf')
-  nnoremap <leader>f :FzfFiles<cr>
-  nnoremap <leader>u :FzfTags<cr>
-  nnoremap <leader>j :call fzf#vim#tags("'".expand('<cword>'))<cr>
+  nnoremap <leader>o :FzfFiles<cr>
+  nnoremap <leader>t :FzfTags<cr>
+  nnoremap <leader>g :!~/.cargo/bin/rusty-tags vi -O tags<cr>
+  nnoremap <leader>l :call fzf#vim#tags("".expand('<cword>'))<cr>
 
   if executable('rg')
     " :Find <term> runs `rg <term>` and passes it to fzf

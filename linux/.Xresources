@@ -1,4 +1,4 @@
-! Xft.dpi: 144
+Xft.dpi: 144
 Xft.autohint: 0
 Xft.lcdfilter: lcddefault
 Xft.hintstyle: hintslight
@@ -13,7 +13,7 @@ URxvt*scrollWithBuffer: true
 URxvt*scrollTtyKeypress: true
 URxvt.secondaryScreen: 1
 URxvt.secondaryScroll: 0
-URxvt.internalBorder: 8 
+URxvt.internalBorder: 30 
 
 ! hard contrast: *background: #1d2021
 *background: #282828

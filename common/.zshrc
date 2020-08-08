@@ -35,9 +35,6 @@ alias e='exa'
 alias ea='exa -a'
 alias el='exa -l'
 alias ela='exa -la'
-#alias update="trizen -Syu --noedit --noconfirm"
-#alias ls="ls --color=auto"
-#alias la="ls -la --color=auto"
 alias diff='diff --color=auto'
 alias ..="cd .."
 alias ...="cd ../.."
@@ -55,12 +52,12 @@ KEYTIMEOUT=1
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='fd --type f'
 
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 export EDITOR=nvim
 
 # cargo
 export PATH=$PATH:$HOME/.cargo/bin
+
+eval "$(zoxide init zsh)"
 
 source ~/.notshared.zsh
 

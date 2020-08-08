@@ -1,0 +1,11 @@
+name: linux
+files:
+  - .notshared.zsh
+  - .xinitrc
+  - .Xresources
+  - .compton.conf
+  - .config/bspwm/bspwmrc
+  - .config/fontconfig/fonts.conf
+  - .config/polybar/config
+  - .config/sxhkd/sxhkdrc
+  - .config/alacritty/alacritty.yml

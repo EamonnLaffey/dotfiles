@@ -1,3 +1,5 @@
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # Install Ruby Gems to ~/gems
 #export GEM_HOME=$HOME/gems
 #export PATH=$HOME/gems/bin:$PATH
