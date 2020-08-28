@@ -39,6 +39,14 @@ alias diff='diff --color=auto'
 alias ..="cd .."
 alias ...="cd ../.."
 
+clippy() {
+    touch $(fd --extension rs) && cargo clippy
+}
+
+show_ports() {
+    netstat -Watnlv | grep LISTEN | awk '{"ps -o comm= -p " $9 | getline procname;colred="\033[01;31m";colclr="\033[0m"; print colred "proto: " colclr $1 colred " | addr.port: " colclr $4 colred " | pid: " colclr $9 colred " | name: " colclr procname;  }' | column -t -s "|"
+}
+
 # bindings
 bindkey -v
 bindkey '^P' up-history
@@ -51,12 +59,8 @@ KEYTIMEOUT=1
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='fd --type f'
-
 export EDITOR=nvim
-
-# cargo
 export PATH=$PATH:$HOME/.cargo/bin
-
 eval "$(zoxide init zsh)"
 
 source ~/.notshared.zsh
