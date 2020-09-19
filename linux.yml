@@ -3,6 +3,9 @@ files:
   - .notshared.zsh
   - .xinitrc
   - .Xresources
+  - .zprofile
+  - bg.png
+  - .fehbg
   - .compton.conf
   - .config/bspwm/bspwmrc
   - .config/fontconfig/fonts.conf
