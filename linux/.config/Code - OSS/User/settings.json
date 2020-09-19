@@ -1,0 +1,6 @@
+{
+    "workbench.colorTheme": "Gruvbox Dark (Medium)",
+    "rust-analyzer.inlayHints.enable": false,
+    "editor.fontFamily": "'Fira Code'",
+    "editor.minimap.enabled": false
+}

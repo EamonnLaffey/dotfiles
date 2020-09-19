@@ -9,3 +9,4 @@ files:
   - .config/polybar/config
   - .config/sxhkd/sxhkdrc
   - .config/alacritty/alacritty.yml
+  - .config/Code - OSS/User/settings.json
