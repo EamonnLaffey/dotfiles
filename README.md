@@ -2,4 +2,4 @@
 
 All dotfiles are managed using https://github.com/EamonnLaffey/filetruck
 
-Convenience scripts pickup_* and dropoff_* are provided to quickly envoke filetruck the relevant arguements.
+Convenience scripts pickup_* and dropoff_* are provided to quickly envoke filetruck with the relevant arguements.
