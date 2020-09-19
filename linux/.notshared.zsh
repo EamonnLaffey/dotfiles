@@ -1,3 +1,5 @@
+# shellcheck shell=bash
+
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
 
 update() {

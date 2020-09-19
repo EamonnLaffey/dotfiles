@@ -4,4 +4,5 @@ files:
   - hostname
   - hosts
   - locale.conf
+  - systemd/system/getty@tty1.service.d/override.conf
 
