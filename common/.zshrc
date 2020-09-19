@@ -23,6 +23,15 @@ prompt pure
 bindkey -v
 KEYTIMEOUT=1
 
+# bindings
+bindkey '^P' up-history
+bindkey '^N' down-history
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
+bindkey '^w' backward-kill-word
+bindkey '^r' history-incremental-search-backward
+bindkey '\e[3~' delete-char 
+
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.cache/zsh/history
@@ -36,13 +45,11 @@ export LESS_TERMCAP_so=$'\e[01;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='fd --type f'
 export EDITOR=nvim
 export PATH=$PATH:$HOME/.cargo/bin
 eval "$(zoxide init zsh)"
-
 
 alias e='exa'
 alias ea='exa -a'
