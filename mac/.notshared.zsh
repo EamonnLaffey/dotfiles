@@ -24,8 +24,19 @@ unset_proxy() {
     unset no_proxy
 }
 
-#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home
+java7() {
+    export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home
+}
+
+java8() {
+    export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home
+}
+
+java11() {
+    export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-11.jdk/Contents/Home
+}
+java11
+
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
 load_jenv() {
